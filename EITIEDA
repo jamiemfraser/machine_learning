@@ -1,0 +1,39 @@
+#ARIMA Model for Long Term and Medium Term Rate series
+#Need to first understand components of the time series: Trend, Seasonal, Cyclic
+components.ts = decompose(AlbaniaTS)
+plot(components.ts)
+
+#Test for Unit Roots
+library("fUnitRoots")
+urkpssTest(AlbaniaTS, type = c("tau"), lags = c("short"),use.lag = NULL, doplot = TRUE)
+tsstationary = diff(AlbaniaTS, differences=1)
+plot(tsstationary)
+
+#Autocorrelation function of original series
+acf(AlbaniaTS,lag.max=34) 
+#The autocorrelation continues to decrease as the lag increases, confirming that there is no linear association between observations separated by larger lags.
+
+#Calculate Autocorrelation/PartialAutocorrelation to identify p, d, and q:
+acf(tsstationary, lag.max=34)
+pacf(tsstationary, lag.max=34)
+#The shape of the ACF determines p and q. Total series is zero or nearly zero, therefore data is random
+
+#Fit ARIMA Model
+fitARIMAAlbania <- arima(AlbaniaTS, order=c(0,1,1),method="ML")
+library(lmtest)
+coeftest(fitARIMAAlbania) 
+
+
+#VAR Model
+EITIDataAlbania <- subset(EITIData, Country == 'Albania', select=c(37, 8:11, 14:16, 18, 33, 35))
+EITIDataAlbania$Date <-as.Date(EITIDataAlbania$Date, "%Y-%m-%d")
+library(xts)
+AlbaniaTS <- xts(EITIDataAlbania,
+    order.by = EITIDataAlbania$Date,
+    frequency = 12,
+    unique = TRUE)
+
+library(vars)
+VAR_est <- VAR(y = AlbaniaTS, p = 1)
+varAlbania <- VAR(AlbaniaTS,   p=1, type="const")
+summary(varAlbania)
