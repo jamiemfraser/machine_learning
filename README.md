@@ -1,4 +1,4 @@
-# rocketfuel
+# IBM Machine Learning Professional Certificate
 
 This repository contains projects from the IBM Machine Learning Professional Certificate from Coursera. I completed the course in August 2021. Skills developed include:
 
