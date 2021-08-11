@@ -4,3 +4,7 @@ This repository contains projects from the IBM Machine Learning Professional Cer
 
 * Exploratory data analysis for machine learning
 * A theoretical overview of machine learning techniques and the history of their development
+
+The projects I completed as part of this Professional Certificate are:
+
+* Analysing country economic conditions to inform data driven decision making for cargo carriers
