@@ -8,3 +8,5 @@ This repository contains projects from the IBM Machine Learning Professional Cer
 The projects I completed as part of this Professional Certificate are:
 
 * Analysing country economic conditions to inform data driven decision making for cargo carriers
+* Performed exploratory data analysis
+* Used supervised learning techniques to identify a LASSO regression as producing the best model
