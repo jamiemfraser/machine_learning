@@ -9,4 +9,4 @@ The projects I completed as part of this Professional Certificate are:
 
 * Analysing country economic conditions to inform data driven decision making for cargo carriers
 * Performed exploratory data analysis
-* Used supervised learning techniques to identify a LASSO regression as producing the best model
+* Used supervised learning techniques, such as LASSO regression and KNN classifiers
