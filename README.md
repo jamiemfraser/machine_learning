@@ -9,7 +9,7 @@ This repository contains projects from the IBM Machine Learning Professional Cer
 * Deep learning reinforcement learning models
 * Time series modeling for prediction
 
-The projects I completed as part of this Professional Certificate are:
+The projects I completed as part of this Professional Certificate demonstrating the following skills:
 
 * Analysing country economic conditions to inform data driven decision making for cargo carriers
 * Performed exploratory data analysis
