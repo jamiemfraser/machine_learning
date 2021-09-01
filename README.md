@@ -15,3 +15,4 @@ The projects I completed as part of this Professional Certificate demonstrating 
 * Performed exploratory data analysis
 * Used supervised learning techniques, such as LASSO regression and KNN classifiers
 * Used unsupervised learning techniques, such as K Means clustering and Heirarchical Agglomerative clustering
+* Used ARMA and ARIMA modeling techniques applied to time series data
